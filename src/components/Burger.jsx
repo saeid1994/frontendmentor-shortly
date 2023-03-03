@@ -1,5 +1,5 @@
 const Burger = (props) => {
-  console.log("%%%%%%%%");
+  
   return (
     <div
       id="nav-icon"
