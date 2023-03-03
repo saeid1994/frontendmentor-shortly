@@ -11,13 +11,13 @@ const Header = () => {
   };
 
   return (
-    <section className="flex justify-between  items-center p-4 mt-7 relative">
+    <section className="flex justify-between bg-red-500 items-center p-4 mt-7 relative">
       <div>
         <Image src={pic} className="h-10 w-36" />
       </div>
 
       {/* <!-- Hamburger Button --> */}
-      <Burger status={open} onClick={handleBurger} />
+      <Burger className="md:hidden" status={open} onClick={handleBurger} />
 
       <div
         className={`rounded-lg flex flex-col items-center justify-center space-y-4 absolute bg-Dark_Violet left-0 right-0 top-20 h-60 m-4  md:hidden ${
