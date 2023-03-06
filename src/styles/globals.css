@@ -6,7 +6,11 @@
   background-image: url("../../public/images/illustration-working.svg");
   background-repeat: no-repeat;
   background-size: cover;
-
+}
+.background-one {
+  background-image: url("../../public/images/bg-shorten-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #nav-icon {

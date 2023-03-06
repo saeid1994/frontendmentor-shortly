@@ -5,22 +5,20 @@ import ShorterItem from "./ShorterItem";
 const Shorter = () => {
   return (
     <section>
-      <div className="bg-Dark_Violet mx-6 h-[11.5rem] mt-8 rounded-lg overflow-hidden relative">
-        <div className="flex justify-end ">
-          <Image src={pic} className=""></Image>
-        </div>
+      <div className=" mx-6 bg-Dark_Violet min-h-[12rem] mt-6 rounded-lg overflow-hidden flex justify-end relative mb-4">
+        <div className="background-one h-[10rem] min-w-[15rem] text-center absolute "></div>
         <form
           action=""
-          className="flex flex-col absolute top-0  p-6 w-full space-y-6"
+          className="flex flex-col w-full z-10 space-y-6 p-4 px-6 justify-center"
         >
           <input
             type="text"
             id="link"
             name="link"
             placeholder="Shorter a link here..."
-            className="px-5 py-4 rounded-lg"
+            className="px-5 py-4 rounded-lg relative"
           />
-          <label for="link" className="absolute top-14 text-red-400">
+          <label for="link" className="absolute top-16 text-red-400">
             First Name
           </label>
           <button className="bg-Cyan px-5 py-3 rounded-lg font-bold text-white text-xl">
@@ -28,8 +26,6 @@ const Shorter = () => {
           </button>
         </form>
       </div>
-      <ShorterItem/>
-      <ShorterItem/>
       <ShorterItem/>
       <ShorterItem/>
     </section>
