@@ -18,12 +18,15 @@ const Shorter = () => {
             id="link"
             name="link"
             placeholder="Shorter a link here..."
-            className="px-5 py-4 rounded-lg relative md:flex-1 md:px-7 "
+            className="px-5 py-4 rounded-lg relative md:flex-1 md:px-7 focus:outline-red-400"
           />
-          <label for="link" className="absolute top-14 text-red-400 md:top-28 md:left-3">
+          <label
+            for="link"
+            className="absolute top-14 text-red-400 md:top-28 md:left-3"
+          >
             First Name
           </label>
-          <button className="bg-Cyan px-5 py-4 rounded-lg font-bold text-white text-xl cursor-pointer md:px-7 ">
+          <button className="bg-Cyan px-5 py-4 rounded-lg font-bold text-white text-xl cursor-pointer md:px-7 hover:brightness-105">
             shorten it!
           </button>
         </form>
