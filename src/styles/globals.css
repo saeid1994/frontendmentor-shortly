@@ -13,6 +13,12 @@
   background-size: cover;
 }
 
+.background-two {
+  background-image: url("../../public/images/bg-shorten-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 #nav-icon {
   width: 50px;
   height: 45px;
