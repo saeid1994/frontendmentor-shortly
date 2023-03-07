@@ -1,11 +1,9 @@
-import Image from "next/image";
-import pic from "../../../public/images/bg-shorten-mobile.svg";
 import ShorterItem from "./ShorterItem";
 
 const Shorter = () => {
   return (
-    <section>
-      <div className=" mx-6 bg-Dark_Violet min-h-[12rem] mt-6 rounded-lg overflow-hidden flex justify-end relative mb-4">
+    <section className="bg-gray-200 md:mt-72">
+      <div className=" mx-6 md:mx-40 bg-Dark_Violet min-h-[12rem] rounded-lg flex justify-end relative -top-24 overflow-hidden">
         <div className="background-one h-[10rem] min-w-[15rem] text-center absolute "></div>
         <form
           action=""
@@ -21,13 +19,20 @@ const Shorter = () => {
           <label for="link" className="absolute top-16 text-red-400">
             First Name
           </label>
-          <button className="bg-Cyan px-5 py-3 rounded-lg font-bold text-white text-xl">
+          <button className="bg-Cyan px-5 py-3 rounded-lg font-bold text-white text-xl cursor-pointer">
             shorten it!
           </button>
         </form>
       </div>
-      <ShorterItem/>
-      <ShorterItem/>
+      <div className="relative -top-16 space-y-4">
+        <ShorterItem />
+        <ShorterItem />
+        <ShorterItem />
+        <ShorterItem />
+        <ShorterItem />
+        <ShorterItem />
+        <ShorterItem />
+      </div>
     </section>
   );
 };
