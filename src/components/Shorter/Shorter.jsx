@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import fetchContent from "../../../redux/reducers/fetchContent";
+import useCopyToClipboard from "../../../utils/useCopyToClipboard";
 import ShorterItem from "./ShorterItem";
+
 
 const Shorter = () => {
   const dispatch = useDispatch();
+  const [isCopied, handleCopy] = useCopyToClipboard()
   const fullShortUrl = useSelector((state) => state?.data?.value?.url);
   const loading = useSelector((state) => state?.data?.value?.loading);
   const [link, setLink] = useState("");
