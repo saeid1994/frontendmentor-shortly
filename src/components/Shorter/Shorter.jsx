@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import fetchContent from "../../../redux/reducers/fetchContent";
 import useCopyToClipboard from "../../../utils/useCopyToClipboard";
@@ -9,8 +9,10 @@ const Shorter = () => {
   const dispatch = useDispatch();
   const [isCopied, handleCopy] = useCopyToClipboard(4000);
   const fullShortUrl = useSelector((state) => state?.data?.value?.url);
+
   const [info, link, setLink] = useShortLink(fullShortUrl);
   const loading = useSelector((state) => state?.data?.value?.loading);
+  const error = useSelector((state) => state?.data?.value?.err);
   const [err, setErr] = useState("");
 
   const handleChange = (e) => {
@@ -25,7 +27,7 @@ const Shorter = () => {
     e.preventDefault();
 
     if (link === "") {
-      return setErr("You must to add something...");
+      return setErr("You must add something...");
     }
     dispatch(fetchContent(link));
     setErr("");
@@ -56,7 +58,7 @@ const Shorter = () => {
             for="link"
             className="absolute top-14 text-red-400 md:top-28 md:left-3"
           >
-            {err}
+            {err || error}
           </label>
           <button
             className={`bg-Cyan px-5 py-4 rounded-lg font-bold text-white text-xl cursor-pointer md:px-7 hover:brightness-105 ${
