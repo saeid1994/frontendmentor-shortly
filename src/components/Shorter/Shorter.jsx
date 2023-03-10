@@ -2,48 +2,20 @@ import React, { useCallback, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import fetchContent from "../../../redux/reducers/fetchContent";
 import useCopyToClipboard from "../../../utils/useCopyToClipboard";
+import useShortLink from "../../../utils/useShortLink";
 import ShorterItem from "./ShorterItem";
 
 const Shorter = () => {
   const dispatch = useDispatch();
   const [isCopied, handleCopy] = useCopyToClipboard(4000);
   const fullShortUrl = useSelector((state) => state?.data?.value?.url);
+  const [info, link, setLink] = useShortLink(fullShortUrl);
   const loading = useSelector((state) => state?.data?.value?.loading);
-  const [link, setLink] = useState("");
-  const [info, setInfo] = useState([]);
   const [err, setErr] = useState("");
 
   const handleChange = (e) => {
     setLink(e.target.value);
   };
-
-  useEffect(() => {
-    const getDataStorage = JSON.parse(localStorage.getItem("listOfShortLinks"));
-
-    setInfo(getDataStorage);
-  }, []);
-  useEffect(() => {
-    const getDataStorage = JSON.parse(localStorage.getItem("listOfShortLinks"));
-
-    if (getDataStorage === null) {
-      localStorage.setItem("listOfShortLinks", JSON.stringify([]));
-    }
-
-    if (fullShortUrl) {
-      localStorage.setItem(
-        "listOfShortLinks",
-        JSON.stringify([
-          ...getDataStorage,
-          { userLink: link, shortLink: fullShortUrl },
-        ])
-      );
-
-      setInfo((state) => {
-        return [...state, { userLink: link, shortLink: fullShortUrl }];
-      });
-    }
-    setLink("");
-  }, [dispatch, fullShortUrl]);
 
   const handleCopyClipBorard = useCallback((link, index) => {
     handleCopy(link, index);
