@@ -18,11 +18,6 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-.background-two {
-  background-image: url("../../public/images/bg-boost-mobile.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
 #nav-icon {
   width: 50px;

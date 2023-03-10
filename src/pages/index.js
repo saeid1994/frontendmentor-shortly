@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import Shorter from "@/components/Shorter/Shorter";
 import Description from "@/components/Description";
 import GetStarted from "@/components/GetStarted";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Shorter />
       <Description />
       <GetStarted />
+      <Footer />
     </Fragment>
   );
 }
