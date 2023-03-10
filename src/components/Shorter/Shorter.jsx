@@ -10,7 +10,6 @@ const Shorter = () => {
   const [isCopied, handleCopy] = useCopyToClipboard(4000);
   const fullShortUrl = useSelector((state) => state?.data?.value?.url);
   const [info, link, setLink] = useShortLink(fullShortUrl);
-  console.log(info);
   const loading = useSelector((state) => state?.data?.value?.loading);
   const error = useSelector((state) => state?.data?.value?.err);
   const [err, setErr] = useState("");
