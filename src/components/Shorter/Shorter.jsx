@@ -55,7 +55,7 @@ const Shorter = () => {
             value={link}
           />
           <label
-            for="link"
+            htmlFor="link"
             className="absolute top-14 text-red-400 md:top-28 md:left-3"
           >
             {err || error}

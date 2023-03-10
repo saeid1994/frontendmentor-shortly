@@ -16,7 +16,13 @@ const Description = () => {
 
         <div className="bg-white w-full md:w-[25rem] h-56 rounded-lg z-10 relative p-4 px-7">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full w-20 bg-Very_Dark_Violet h-20 flex justify-center items-center">
-            <Image src={pic} width={100} height={100} className="h-10 w-10" />
+            <Image
+              alt="img"
+              src={pic}
+              width={100}
+              height={100}
+              className="h-10 w-10"
+            />
           </div>
           <h2 className="mt-10 text-2xl font-bold">Brand Recognition</h2>
           <p className=" text-centr mt-3 text-Grayish_Violet">
@@ -26,7 +32,13 @@ const Description = () => {
         </div>
         <div className="bg-white w-full md:w-[25rem] h-56 rounded-lg z-10 relative p-4 px-7 mt-20 md:mt-15">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full w-20 bg-Very_Dark_Violet h-20 flex justify-center items-center">
-            <Image src={pic2} width={100} height={100} className="h-10 w-10" />
+            <Image
+              alt="img"
+              src={pic2}
+              width={100}
+              height={100}
+              className="h-10 w-10"
+            />
           </div>
           <h2 className="mt-10 text-2xl font-bold">Detailed Records</h2>
           <p className=" text-centr mt-3 text-Grayish_Violet">
@@ -36,7 +48,13 @@ const Description = () => {
         </div>
         <div className="bg-white w-full md:w-[25rem] h-56 rounded-lg z-10 relative p-4 px-7 mt-20 md:mt-40">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full w-20 bg-Very_Dark_Violet h-20 flex justify-center items-center">
-            <Image src={pic3} width={100} height={100} className="h-10 w-10" />
+            <Image
+              alt="img"
+              src={pic3}
+              width={100}
+              height={100}
+              className="h-10 w-10"
+            />
           </div>
           <h2 className="mt-10 text-2xl font-bold">Detailed Records</h2>
           <p className=" text-centr mt-3 text-Grayish_Violet">

@@ -14,7 +14,7 @@ const Header = () => {
     <section className="flex justify-between  items-center p-4 mt-7 relative px-7 md:px-40 ">
       <div className="flex">
         <div>
-          <Image src={pic} className="h-10 w-36" />
+          <Image alt="img" src={pic} className="h-10 w-36" />
         </div>
         <div className="md:flex space-x-6  items-center justify-between ml-9 text-Grayish_Violet hidden font-bold">
           <div className="cursor-pointer hover:text-Very_Dark_Blue duration-150">

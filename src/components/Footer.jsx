@@ -11,6 +11,7 @@ const Footer = () => {
     <section className=" bg-Very_Dark_Violet flex flex-col p-16 md:py-10 items-center space-y-10 md:flex-row md:space-x-40 md:space-y-0 md:h-[38vh] justify-center">
       <div className="md:flex md:items-start h-full ">
         <Image
+          alt="img"
           src={pic}
           width={100}
           height={100}
@@ -57,34 +58,37 @@ const Footer = () => {
             Contact
           </Link>
         </div>
-        
       </div>
       <div className="flex flex-row space-x-6 md:h-full ">
-          <Image
-            src={faceBook}
-            width={100}
-            height={100}
-            className=" h-[2rem] w-[2rem]"
-          ></Image>
-          <Image
-            src={twitter}
-            width={100}
-            height={100}
-            className=" h-[2rem] w-[2rem]"
-          ></Image>
-          <Image
-            src={pinterest}
-            width={100}
-            height={100}
-            className=" h-[2rem] w-[2rem]"
-          ></Image>
-          <Image
-            src={instagram}
-            width={100}
-            height={100}
-            className=" h-[2rem] w-[2rem]"
-          ></Image>
-        </div>
+        <Image
+          alt="img"
+          src={faceBook}
+          width={100}
+          height={100}
+          className=" h-[2rem] w-[2rem]"
+        ></Image>
+        <Image
+          alt="img"
+          src={twitter}
+          width={100}
+          height={100}
+          className=" h-[2rem] w-[2rem]"
+        ></Image>
+        <Image
+          alt="img"
+          src={pinterest}
+          width={100}
+          height={100}
+          className=" h-[2rem] w-[2rem]"
+        ></Image>
+        <Image
+          alt="img"
+          src={instagram}
+          width={100}
+          height={100}
+          className=" h-[2rem] w-[2rem]"
+        ></Image>
+      </div>
     </section>
   );
 };

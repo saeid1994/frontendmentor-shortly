@@ -10,6 +10,7 @@ const GetStarted = () => {
       <div>
         {/* Mobile Image */}
         <Image
+          alt="img"
           src={pic}
           width={300}
           height={300}
@@ -17,6 +18,7 @@ const GetStarted = () => {
         ></Image>
         {/* Desktop Image */}
         <Image
+          alt="img"
           src={pic2}
           width={300}
           height={300}
