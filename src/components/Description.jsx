@@ -3,9 +3,9 @@ import pic from "../../public/images/icon-brand-recognition.svg";
 import pic2 from "../../public/images/icon-detailed-records.svg";
 import pic3 from "../../public/images/icon-fully-customizable.svg";
 
-const Descriptions = () => {
+const Description = () => {
   return (
-    <section className="bg-gray-100  text-center p-4 px-5">
+    <section className="bg-gray-100  text-center p-4 px-5 pb-20">
       <h2 className="text-3xl font-bold"> Advanced Statistics</h2>
       <p className="text-Grayish_Violet text-center text-lg mt-5">
         Track how your links are performing across the web with our advanced
@@ -49,4 +49,4 @@ const Descriptions = () => {
   );
 };
 
-export default Descriptions;
+export default Description;
