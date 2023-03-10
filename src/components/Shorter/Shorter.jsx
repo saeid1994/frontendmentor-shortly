@@ -1,13 +1,12 @@
-import { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import fetchContent from "../../../redux/reducers/fetchContent";
 import useCopyToClipboard from "../../../utils/useCopyToClipboard";
 import ShorterItem from "./ShorterItem";
 
-
 const Shorter = () => {
   const dispatch = useDispatch();
-  const [isCopied, handleCopy] = useCopyToClipboard()
+  const [isCopied, handleCopy] = useCopyToClipboard(4000);
   const fullShortUrl = useSelector((state) => state?.data?.value?.url);
   const loading = useSelector((state) => state?.data?.value?.loading);
   const [link, setLink] = useState("");
@@ -45,6 +44,10 @@ const Shorter = () => {
     }
     setLink("");
   }, [dispatch, fullShortUrl]);
+
+  const handleCopyClipBorard = useCallback((link, index) => {
+    handleCopy(link, index);
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -94,9 +97,15 @@ const Shorter = () => {
         </form>
       </div>
       <div className="relative -top-16 space-y-4">
-        {info.map((data) => {
+        {info.map((data, index) => {
           return (
-            <ShorterItem userLink={data.userLink} shortLink={data.shortLink} />
+            <ShorterItem
+              userLink={data.userLink}
+              shortLink={data.shortLink}
+              index={index}
+              handleCopy={handleCopyClipBorard}
+              textStatus={isCopied}
+            />
           );
         })}
       </div>

@@ -1,20 +1,23 @@
-import React, { useState } from "react";
+import { useEffect, useState } from "react";
 import copy from "copy-to-clipboard";
 
 export default function useCopyToClipboard(resetInterval = null) {
-  const [isCopied, setCopied] = useState(false);
+  const [isCopied, setCopied] = useState(-1);
 
-  function handleCopy(text) {
-    if (typeof text === "string" || typeof text == "number") {
-      copy(text.toString());
-      setCopied(true);
-    } else {
-      setCopied(false);
-      console.error(
-        `Cannot copy typeof ${typeof text} to clipboard, must be a string or number.`
-      );
-    }
+  function handleCopy(text, whichOne) {
+    copy(text.toString());
+    setCopied(whichOne);
   }
+
+  useEffect(() => {
+    let timeout;
+    if (isCopied && resetInterval) {
+      timeout = setTimeout(() => setCopied(-1), resetInterval);
+    }
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, [isCopied, resetInterval]);
 
   return [isCopied, handleCopy];
 }
