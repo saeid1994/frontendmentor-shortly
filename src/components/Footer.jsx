@@ -8,7 +8,7 @@ import twitter from "../../public/images/icon-twitter.svg";
 
 const Footer = () => {
   return (
-    <section className=" bg-Very_Dark_Violet flex flex-col p-16 md:py-10 items-center space-y-10 md:flex-row md:space-x-40 md:space-y-0 md:h-[45vh] justify-center">
+    <section className=" bg-Very_Dark_Violet flex flex-col p-16 md:py-10 items-center space-y-10 md:flex-row md:space-x-40 md:space-y-0 md:h-[38vh] justify-center">
       <div className="md:flex md:items-start h-full ">
         <Image
           src={pic}
@@ -17,8 +17,8 @@ const Footer = () => {
           className=" h-[2rem] w-[7rem]"
         ></Image>
       </div>
-      <div className="flex flex-Col md:flex-row md:space-x-32  h-full">
-        <div className="flex flex-col space-y-4 text-xl items-center md:items-start">
+      <div className="flex flex-col md:flex-row md:space-x-32  h-full ">
+        <div className="flex flex-col space-y-4 text-xl items-center md:items-start mt-16 md:mt-0 ">
           <h3 className="text-white font-bold text-lg mb-3 ">Features</h3>
           <Link href="/" className="text-Gray">
             Link Shortening
@@ -30,8 +30,8 @@ const Footer = () => {
             Analytics
           </Link>
         </div>
-        <div className="flex flex-col space-y-4 text-xl items-center md:items-start ">
-          <h3 className="text-white font-bold text-lg mb-3 ">Resources</h3>
+        <div className="flex flex-col space-y-4 text-xl items-center md:items-start mt-16 md:mt-0 ">
+          <h3 className="text-white font-bold text-lg mb-3">Resources</h3>
           <Link href="/" className="text-Gray">
             Blog
           </Link>
@@ -42,7 +42,7 @@ const Footer = () => {
             Support
           </Link>
         </div>
-        <div className="flex flex-col space-y-4 text-xl items-center md:items-start">
+        <div className="flex flex-col space-y-4 text-xl items-center md:items-start mt-16 md:mt-0">
           <h3 className="text-white font-bold text-lg mb-3">Company</h3>
           <Link href="/" className="text-Gray">
             About
@@ -59,7 +59,7 @@ const Footer = () => {
         </div>
         
       </div>
-      <div className="flex flex-row space-x-6 md:h-full">
+      <div className="flex flex-row space-x-6 md:h-full ">
           <Image
             src={faceBook}
             width={100}
