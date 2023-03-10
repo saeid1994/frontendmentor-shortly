@@ -39,7 +39,7 @@ const Shorter = () => {
         <div className="background-one h-[10rem] min-w-[15rem] text-center absolute md:hidden"></div>
 
         {/* Desktop Images */}
-        <div className="background-two h-full  text-center absolute m w-full hidden md:block"></div>
+        <div className="background-two h-full  text-center absolute  w-full hidden md:block"></div>
 
         <form
           action="/"
