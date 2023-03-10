@@ -11,7 +11,7 @@ const Description = () => {
         Track how your links are performing across the web with our advanced
         statistics dashboard.
       </p>
-      <div className=" px-3  flex flex-col relative items-center mt-28 md:flex-row  md:mt-10 bg-red-500 w-full md:px-0 md:justify-between md:mx-20">
+      <div className=" px-3  flex flex-col relative items-center mt-28 md:flex-row  md:mt-10  w-full md:px-0 md:justify-between ">
         <div className="h-full bg-Cyan w-[8px] absolute md:h-[10px] md:w-full "></div>
 
         <div className="bg-white w-full md:w-[25rem] h-56 rounded-lg z-10 relative p-4 px-7">
