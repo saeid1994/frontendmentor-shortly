@@ -71,7 +71,7 @@ const Shorter = () => {
         </form>
       </div>
       <div className="relative -top-16 space-y-4">
-        {info.map((data, index) => {
+        {info?.map((data, index) => {
           return (
             <ShorterItem
               userLink={data.userLink}
