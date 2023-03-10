@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 import copy from "copy-to-clipboard";
 
-export default function useCopyToClipboard(resetInterval = null) {
+const useCopyToClipboard = (resetInterval = null) => {
   const [isCopied, setCopied] = useState(-1);
-
   function handleCopy(text, whichOne) {
     copy(text.toString());
     setCopied(whichOne);
@@ -21,4 +20,5 @@ export default function useCopyToClipboard(resetInterval = null) {
   }, [isCopied, resetInterval]);
 
   return [isCopied, handleCopy];
-}
+};
+export default useCopyToClipboard;
