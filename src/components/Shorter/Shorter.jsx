@@ -34,9 +34,9 @@ const Shorter = () => {
   };
 
   return (
-    <section className="bg-gray-200 md:mt-60">
+    <section className="bg-gray-100 md:mt-60">
       <div className=" mx-6 md:mx-40 bg-Dark_Violet min-h-[12rem] md:min-h-[10rem] rounded-lg flex justify-end relative -top-24 md:-top-20 overflow-hidden">
-        <div className="background-one h-[10rem] min-w-[15rem] text-center absolute md:hidden "></div>
+        <div className="background-one h-[10rem] min-w-[15rem] text-center absolute md:hidden"></div>
 
         {/* Desktop Images */}
         <div className="background-two h-full  text-center absolute m w-full hidden md:block"></div>

@@ -29,7 +29,6 @@ export const shortLink = createSlice({
   },
 });
 
-// Action creators are generated for each case reducer function
 export const { increment } = shortLink.actions;
 
 export default shortLink.reducer;
