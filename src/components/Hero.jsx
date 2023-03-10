@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <section className="flex flex-col mt-6   md:flex-row md:h-[70vh] mb-18">
+    <section className="flex flex-col mt-6 md:flex-row md:h-[70vh] mb-18">
       <div className="hero min-h-[55vh]  md:w-1/2 md:order-1 ">
       </div>
       {/* texts & button container */}
